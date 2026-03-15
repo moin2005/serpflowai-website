@@ -1,6 +1,7 @@
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, CheckCircle2, Zap, Brain, TrendingUp, MessageSquare, Calendar, Lightbulb, BarChart3, Shield, Eye, Zap as Lightning, Target } from "lucide-react";
+import { ArrowRight, CheckCircle2, Zap, Brain, TrendingUp, MessageSquare, Calendar, Lightbulb, BarChart3 } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
@@ -42,7 +43,7 @@ export default function Home() {
               <a href="#blog" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">Blog</a>
               <a href="/pricing" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">Pricing</a>
               <a href="#audit" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">Free Audit</a>
-              <a href="/contact" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">Contact</a>
+              <a href="#contact" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">Contact</a>
               <a href="/contact" className="inline-flex items-center justify-center px-6 py-2 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors">Get Started</a>
             </div>
           </div>
@@ -66,35 +67,6 @@ export default function Home() {
               <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#2c3e50] text-[#2c3e50] hover:bg-gray-50 rounded-md font-medium transition-colors">
                 Request Free SEO Audit
               </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Trust Signals */}
-        <section className="py-12 md:py-16 bg-white border-b border-gray-200">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <Shield className="h-8 w-8 text-[#2c3e50]" />
-                </div>
-                <h3 className="font-bold text-[#2c3e50] mb-2">100% White Hat SEO</h3>
-                <p className="text-gray-600 text-sm">We follow Google's guidelines strictly and never use black hat techniques.</p>
-              </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <Eye className="h-8 w-8 text-[#2c3e50]" />
-                </div>
-                <h3 className="font-bold text-[#2c3e50] mb-2">Transparent Reporting</h3>
-                <p className="text-gray-600 text-sm">Monthly reports with clear metrics and actionable insights you can understand.</p>
-              </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <Target className="h-8 w-8 text-[#2c3e50]" />
-                </div>
-                <h3 className="font-bold text-[#2c3e50] mb-2">ROI-Focused Campaigns</h3>
-                <p className="text-gray-600 text-sm">Every strategy is tailored to your business goals and designed to generate measurable results.</p>
-              </div>
             </div>
           </div>
         </section>
@@ -152,55 +124,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Why Choose Us */}
-        <section className="py-16 md:py-24 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2c3e50] mb-16" style={{ fontFamily: "Playfair Display, serif" }}>
-              Why Choose SerpFlow AI
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-8 hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Lightning className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-bold text-[#2c3e50] mb-2">Data-Driven SEO Strategies</h3>
-                    <p className="text-gray-600">Every decision is backed by comprehensive research, competitor analysis, and performance metrics. We don't guess—we analyze.</p>
-                  </div>
-                </div>
-              </Card>
-              <Card className="p-8 hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Eye className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-bold text-[#2c3e50] mb-2">Transparent Monthly Reporting</h3>
-                    <p className="text-gray-600">You'll receive detailed reports showing exactly what we did, how your rankings improved, and the leads generated from our efforts.</p>
-                  </div>
-                </div>
-              </Card>
-              <Card className="p-8 hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Shield className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-bold text-[#2c3e50] mb-2">White-Hat SEO Methods</h3>
-                    <p className="text-gray-600">We strictly follow Google's guidelines and best practices. No shortcuts, no risky tactics—just sustainable, long-term growth.</p>
-                  </div>
-                </div>
-              </Card>
-              <Card className="p-8 hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Target className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-bold text-[#2c3e50] mb-2">ROI-Focused Campaigns</h3>
-                    <p className="text-gray-600">Every strategy is customized to your business. We focus on generating leads and revenue, not just vanity metrics.</p>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         {/* Services */}
-        <section id="services" className="py-16 md:py-24 bg-white">
+        <section id="services" className="py-16 md:py-24 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2c3e50] mb-16" style={{ fontFamily: "Playfair Display, serif" }}>
               Our Services
@@ -246,30 +171,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SEO Process */}
-        <section className="py-16 md:py-24 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2c3e50] mb-16" style={{ fontFamily: "Playfair Display, serif" }}>
-              Our SEO Process
-            </h2>
-            <div className="grid md:grid-cols-4 gap-8">
-              {[
-                { num: "01", title: "Website Audit", desc: "Comprehensive analysis of your current SEO performance and technical issues" },
-                { num: "02", title: "Keyword Research", desc: "Identify high-value keywords with search intent matching your business" },
-                { num: "03", title: "Optimization", desc: "Implement on-page, technical, and content optimizations" },
-                { num: "04", title: "Ranking Growth", desc: "Monitor progress and continuously improve rankings and organic traffic" },
-              ].map((step, i) => (
-                <div key={i} className="text-center">
-                  <div className="text-4xl font-bold text-[#2c3e50] mb-4" style={{ fontFamily: "Playfair Display, serif" }}>{step.num}</div>
-                  <h4 className="font-bold text-[#2c3e50] mb-2">{step.title}</h4>
-                  <p className="text-gray-600 text-sm">{step.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Process (Professional) */}
+        {/* Process */}
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2c3e50] mb-16" style={{ fontFamily: "Playfair Display, serif" }}>
@@ -360,9 +262,9 @@ export default function Home() {
                 value={formData.businessType}
                 onChange={handleFormChange}
               />
-              <button type="submit" className="w-full px-6 py-3 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors">
-                Request Free SEO Audit <ArrowRight className="ml-2 h-4 w-4 inline" />
-              </button>
+              <Button type="submit" className="w-full bg-[#2c3e50] hover:bg-[#1a1a1a]">
+                Request Free SEO Audit <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
             </form>
           </div>
         </section>
