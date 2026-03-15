@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { useState } from "react";
+import CalendarBooking from "@/components/CalendarBooking";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -188,14 +189,17 @@ export default function Contact() {
                   <p className="text-sm opacity-90 mb-4">
                     Schedule a free strategy call to discuss your SEO and AI automation needs.
                   </p>
-                  <Button className="bg-white text-[#2c3e50] hover:bg-gray-100">
+                  <a href="#booking" className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#2c3e50] hover:bg-gray-100 rounded-md font-medium transition-colors">
                     Book Free Strategy Call
-                  </Button>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        {/* Calendar Booking */}
+        <CalendarBooking />
       </main>
 
       {/* Footer */}

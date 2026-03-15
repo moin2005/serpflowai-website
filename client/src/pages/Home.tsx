@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, CheckCircle2, Zap, Brain, TrendingUp, MessageSquare, Calendar, Lightbulb, BarChart3, Shield, Eye, Zap as Lightning, Target } from "lucide-react";
 import { useState } from "react";
+import CalendarBooking from "@/components/CalendarBooking";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -60,11 +61,11 @@ export default function Home() {
               Helping businesses increase visibility, generate leads, and automate operations using modern SEO strategies and AI-powered systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors">
+              <a href="#booking" className="inline-flex items-center justify-center px-6 py-3 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors">
                 Book Free Strategy Call <ArrowRight className="ml-2 h-4 w-4" />
               </a>
-              <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#2c3e50] text-[#2c3e50] hover:bg-gray-50 rounded-md font-medium transition-colors">
-                Request Free SEO Audit
+              <a href="/pricing" className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#2c3e50] text-[#2c3e50] hover:bg-gray-50 rounded-md font-medium transition-colors">
+                View SEO Plans
               </a>
             </div>
           </div>
@@ -230,7 +231,6 @@ export default function Home() {
               <div className="grid md:grid-cols-4 gap-6">
                 {[
                   { icon: Brain, title: "AI Chatbots", desc: "24/7 customer engagement with intelligent conversational AI" },
-                  { icon: Calendar, title: "AI Receptionist", desc: "Automate customer inquiries and appointment scheduling" },
                   { icon: Lightbulb, title: "Lead Qualification", desc: "Automatically qualify and prioritize leads for your sales team" },
                   { icon: Zap, title: "Workflow Automation", desc: "Eliminate repetitive tasks and streamline business operations" },
                 ].map((service, i) => (
@@ -404,11 +404,14 @@ export default function Home() {
             <p className="text-lg mb-8 opacity-90">
               Schedule a free strategy call with our team to discuss your goals and discover how we can help.
             </p>
-            <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#2c3e50] hover:bg-gray-100 rounded-md font-medium transition-colors">
+            <a href="#booking" className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#2c3e50] hover:bg-gray-100 rounded-md font-medium transition-colors">
               Book Free Strategy Call <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           </div>
         </section>
+
+        {/* Calendar Booking */}
+        <CalendarBooking />
       </main>
 
       {/* Footer */}

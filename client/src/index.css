@@ -243,3 +243,38 @@ button:hover {
 html {
   scroll-behavior: smooth;
 }
+
+
+/* Button hover effects */
+button, a[href], [role="button"] {
+  @apply transition-all duration-200;
+}
+
+/* Pricing card hover animation */
+.pricing-card {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+/* Section fade-in on scroll */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Subtle button hover effect */
+button:hover:not(:disabled),
+a[href]:hover,
+[role="button"]:hover:not([aria-disabled="true"]) {
+  @apply transform transition-transform duration-200;
+}
+
+/* Card hover effect */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg;
+}
