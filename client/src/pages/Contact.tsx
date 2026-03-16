@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { useState } from "react";
-import CalendarBooking from "@/components/CalendarBooking";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,6 +14,7 @@ export default function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [showLeadForm, setShowLeadForm] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -189,17 +190,17 @@ export default function Contact() {
                   <p className="text-sm opacity-90 mb-4">
                     Schedule a free strategy call to discuss your SEO and AI automation needs.
                   </p>
-                  <a href="#booking" className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#2c3e50] hover:bg-gray-100 rounded-md font-medium transition-colors">
+                  <button onClick={() => setShowLeadForm(true)} className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#2c3e50] hover:bg-gray-100 rounded-md font-medium transition-colors">
                     Book Free Strategy Call
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Calendar Booking */}
-        <CalendarBooking />
+        {/* Lead Capture Form Modal */}
+        <LeadCaptureForm isOpen={showLeadForm} onClose={() => setShowLeadForm(false)} formType="strategy-call" />
       </main>
 
       {/* Footer */}

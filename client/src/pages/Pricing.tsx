@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { useState } from "react";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 
 export default function Pricing() {
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
+  const [showLeadForm, setShowLeadForm] = useState(false);
 
   const seoPlans = [
     {
@@ -328,9 +330,9 @@ export default function Pricing() {
             <p className="text-lg mb-8 opacity-90">
               Get a free consultation to discuss which plan is best for your needs.
             </p>
-            <Button size="lg" className="bg-white text-[#2c3e50] hover:bg-gray-100">
+            <button onClick={() => setShowLeadForm(true)} className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#2c3e50] hover:bg-gray-100 rounded-md font-medium transition-colors">
               Book Free Strategy Call <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            </button>
           </div>
         </section>
 
@@ -413,6 +415,9 @@ export default function Pricing() {
             </div>
           </div>
         </section>
+
+        {/* Lead Capture Form Modal */}
+        <LeadCaptureForm isOpen={showLeadForm} onClose={() => setShowLeadForm(false)} formType="strategy-call" />
       </main>
 
       {/* Footer */}

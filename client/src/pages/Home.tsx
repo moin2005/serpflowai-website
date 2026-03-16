@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, CheckCircle2, Zap, Brain, TrendingUp, MessageSquare, Calendar, Lightbulb, BarChart3, Shield, Eye, Zap as Lightning, Target } from "lucide-react";
 import { useState } from "react";
-import CalendarBooking from "@/components/CalendarBooking";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -11,6 +11,8 @@ export default function Home() {
     website: "",
     businessType: "",
   });
+  const [showLeadForm, setShowLeadForm] = useState(false);
+  const [formType, setFormType] = useState<"strategy-call" | "seo-audit">("strategy-call");
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -61,9 +63,9 @@ export default function Home() {
               Helping businesses increase visibility, generate leads, and automate operations using modern SEO strategies and AI-powered systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#booking" className="inline-flex items-center justify-center px-6 py-3 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors">
+              <button onClick={() => { setFormType("strategy-call"); setShowLeadForm(true); }} className="inline-flex items-center justify-center px-6 py-3 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors">
                 Book Free Strategy Call <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
+              </button>
               <a href="/pricing" className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#2c3e50] text-[#2c3e50] hover:bg-gray-50 rounded-md font-medium transition-colors">
                 View SEO Plans
               </a>
@@ -323,47 +325,16 @@ export default function Home() {
 
         {/* Audit Form */}
         <section id="audit" className="py-16 md:py-24 bg-white">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2c3e50] mb-4" style={{ fontFamily: "Playfair Display, serif" }}>
               Get Your Free SEO Audit
             </h2>
-            <p className="text-center text-gray-600 mb-12">
+            <p className="text-center text-gray-600 mb-8">
               We'll analyze your website using professional tools including PageSpeed Insights, Google Search Console, and technical SEO checks. No automated tool—just expert analysis.
             </p>
-            <form onSubmit={handleFormSubmit} className="space-y-4">
-              <Input
-                placeholder="Your Name"
-                name="name"
-                value={formData.name}
-                onChange={handleFormChange}
-                required
-              />
-              <Input
-                type="email"
-                placeholder="Email Address"
-                name="email"
-                value={formData.email}
-                onChange={handleFormChange}
-                required
-              />
-              <Input
-                type="url"
-                placeholder="Website URL"
-                name="website"
-                value={formData.website}
-                onChange={handleFormChange}
-                required
-              />
-              <Input
-                placeholder="Business Type (e.g., E-commerce, SaaS, Local Business)"
-                name="businessType"
-                value={formData.businessType}
-                onChange={handleFormChange}
-              />
-              <button type="submit" className="w-full px-6 py-3 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors">
-                Request Free SEO Audit <ArrowRight className="ml-2 h-4 w-4 inline" />
-              </button>
-            </form>
+            <button onClick={() => { setFormType("seo-audit"); setShowLeadForm(true); }} className="inline-flex items-center justify-center px-8 py-3 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors">
+              Request Free SEO Audit <ArrowRight className="ml-2 h-4 w-4" />
+            </button>
           </div>
         </section>
 
@@ -410,8 +381,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Calendar Booking */}
-        <CalendarBooking />
+        {/* Lead Capture Form Modal */}
+        <LeadCaptureForm isOpen={showLeadForm} onClose={() => setShowLeadForm(false)} formType={formType} />
       </main>
 
       {/* Footer */}
