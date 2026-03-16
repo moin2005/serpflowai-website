@@ -80,7 +80,7 @@ export default function Pricing() {
         "Setup and Testing",
       ],
       buttonText: "Get Started",
-      buttonLink: "#",
+      buttonLink: "https://rzp.io/rzp/IkTlTrq",
       popular: false,
     },
     {
@@ -97,7 +97,7 @@ export default function Pricing() {
         "CRM Integration",
       ],
       buttonText: "Get Started",
-      buttonLink: "#",
+      buttonLink: "https://rzp.io/rzp/o4xXPfQ",
       popular: false,
     },
     {
@@ -114,7 +114,7 @@ export default function Pricing() {
         "Custom AI Training",
       ],
       buttonText: "Get Started",
-      buttonLink: "#",
+      buttonLink: "https://rzp.io/rzp/idBJLBtS",
       popular: false,
     },
   ];
