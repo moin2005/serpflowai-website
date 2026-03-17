@@ -3,6 +3,9 @@ import { Input } from "@/components/ui/input";
 import { ArrowRight, CheckCircle2, Zap, Brain, TrendingUp, MessageSquare, Calendar, Lightbulb, BarChart3, Shield, Eye, Zap as Lightning, Target } from "lucide-react";
 import { useState } from "react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import MobileNav from "@/components/MobileNav";
+
+const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663440467419/P3fiAVfaV8omLzzwuQ3DCY/pasted_file_ANmRGr_image_89f60f74.png";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -28,17 +31,18 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
+      {/* Mobile Navigation */}
+      <MobileNav logoUrl={LOGO_URL} onStrategyCallClick={() => { setFormType("strategy-call"); setShowLeadForm(true); }} />
+
+      {/* Desktop Navigation */}
+      <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 hidden md:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-[#2c3e50] rounded flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
-              </div>
+              <img src={LOGO_URL} alt="SerpFlow AI" className="h-10 w-10" />
               <span className="font-bold text-lg text-[#2c3e50]">SerpFlow AI</span>
             </div>
-            <div className="hidden md:flex items-center gap-8">
+            <div className="flex items-center gap-8">
               <a href="/" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">Home</a>
               <a href="#services" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">Services</a>
               <a href="#about" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">About</a>
