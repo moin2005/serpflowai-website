@@ -14,8 +14,8 @@ export default function Pricing() {
   const seoPlans = [
     {
       name: "SEO Starter",
-      price: 21.99,
-      inrPrice: "₹2,033",
+      price: 25,
+      inrPrice: "₹2,327",
       description: "Best for new websites starting SEO",
       features: [
         "Basic Website SEO Audit",
@@ -32,8 +32,8 @@ export default function Pricing() {
     },
     {
       name: "SEO Growth",
-      price: 43.99,
-      inrPrice: "₹4,068",
+      price: 49,
+      inrPrice: "₹4,561",
       description: "Best for businesses wanting consistent rankings",
       features: [
         "Everything in Starter +",
@@ -50,8 +50,8 @@ export default function Pricing() {
     },
     {
       name: "SEO Enterprise",
-      price: 65.99,
-      inrPrice: "₹6,103",
+      price: 75,
+      inrPrice: "₹6,981",
       description: "Best for businesses wanting aggressive growth",
       features: [
         "Everything in Growth +",
