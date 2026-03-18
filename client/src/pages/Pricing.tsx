@@ -122,6 +122,59 @@ export default function Pricing() {
     },
   ];
 
+  const websitePlans = [
+    {
+      name: "Starter Website",
+      price: 99,
+      inrPrice: "₹8,200",
+      description: "Perfect for small businesses",
+      features: [
+        "3–5 pages",
+        "Basic SEO setup",
+        "Mobile responsive design",
+        "Contact form integration",
+        "Basic performance optimization",
+      ],
+      buttonText: "Get Website Built",
+      buttonLink: "/contact",
+      popular: false,
+    },
+    {
+      name: "Business Website",
+      price: 199,
+      inrPrice: "₹16,500",
+      description: "For growing businesses",
+      features: [
+        "5–8 pages",
+        "Advanced SEO setup",
+        "Speed optimization",
+        "Blog integration",
+        "Analytics setup",
+        "Email newsletter integration",
+      ],
+      buttonText: "Get Website Built",
+      buttonLink: "/contact",
+      popular: true,
+    },
+    {
+      name: "Premium Website",
+      price: 399,
+      inrPrice: "₹33,000",
+      description: "Complete solution",
+      features: [
+        "Full website",
+        "SEO + conversion optimization",
+        "Priority support",
+        "Advanced integrations",
+        "Custom features",
+        "Monthly maintenance included",
+      ],
+      buttonText: "Get Website Built",
+      buttonLink: "/contact",
+      popular: false,
+    },
+  ];
+
   const faqs = [
     {
       question: "How are your pricing tiers determined?",
@@ -284,6 +337,45 @@ export default function Pricing() {
                   >
                     {plan.buttonText}
                   </Button>
+                  <ul className="space-y-3">
+                    {plan.features.map((feature, j) => (
+                      <li key={j} className="flex gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+                        <span className="text-gray-700 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Website Development Pricing */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-[#2c3e50] mb-4" style={{ fontFamily: "Playfair Display, serif" }}>
+                Website Development & Optimization
+              </h2>
+              <p className="text-gray-600">High-converting, fast, and SEO-optimized websites designed to generate leads and improve user experience</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {websitePlans.map((plan, i) => (
+                <Card key={i} className={`p-8 ${plan.popular ? "border-2 border-yellow-500 shadow-lg" : ""}`}>
+                  {plan.popular && <div className="text-center mb-4"><span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium">Most Popular</span></div>}
+                  <h3 className="text-2xl font-bold text-[#2c3e50] mb-2">{plan.name}</h3>
+                  <p className="text-gray-600 text-sm mb-6">{plan.description}</p>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-[#2c3e50]">${plan.price}</span>
+                    <span className="text-gray-600 ml-2">/ {plan.inrPrice}</span>
+                  </div>
+                  <a
+                    href={plan.buttonLink}
+                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors mb-8"
+                  >
+                    {plan.buttonText}
+                  </a>
                   <ul className="space-y-3">
                     {plan.features.map((feature, j) => (
                       <li key={j} className="flex gap-3">

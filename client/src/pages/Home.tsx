@@ -232,7 +232,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div>
+            <div className="mb-16">
               <h3 className="text-2xl font-bold text-[#2c3e50] mb-12 text-center">AI Automation Services</h3>
               <div className="grid md:grid-cols-4 gap-6">
                 {[
@@ -247,6 +247,30 @@ export default function Home() {
                     <button className="text-[#2c3e50] hover:text-[#1a1a1a] font-medium text-sm mt-4">Learn More →</button>
                   </Card>
                 ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold text-[#2c3e50] mb-12 text-center">Website Development & Optimization</h3>
+              <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">High-converting, fast, and SEO-optimized websites designed to generate leads and improve user experience.</p>
+              <div className="grid md:grid-cols-5 gap-6 mb-8">
+                {[
+                  { icon: TrendingUp, title: "Custom website design" },
+                  { icon: BarChart3, title: "Mobile responsive development" },
+                  { icon: Zap, title: "SEO-friendly structure" },
+                  { icon: Lightning, title: "Fast loading speed optimization" },
+                  { icon: Target, title: "Conversion-focused layout" },
+                ].map((service, i) => (
+                  <Card key={i} className="p-6 hover:shadow-lg transition-shadow">
+                    <service.icon className="h-8 w-8 text-[#2c3e50] mb-4" />
+                    <h4 className="font-bold text-[#2c3e50] mb-2 text-sm">{service.title}</h4>
+                  </Card>
+                ))}
+              </div>
+              <div className="text-center">
+                <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors">
+                  Get Website Built <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
               </div>
             </div>
           </div>
