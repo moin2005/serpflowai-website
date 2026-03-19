@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2, Zap, Brain, TrendingUp, MessageSquare, Calend
 import { useState } from "react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import MobileNav from "@/components/MobileNav";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663440467419/P3fiAVfaV8omLzzwuQ3DCY/pasted_file_ANmRGr_image_89f60f74.png";
 
@@ -59,8 +60,9 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-gray-50 to-white py-20 md:py-32">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="relative py-20 md:py-32 overflow-hidden">
+          <AnimatedBackground />
+          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-[#2c3e50] mb-6" style={{ fontFamily: "Playfair Display, serif" }}>
               Grow Your Business with SEO & AI Automation
             </h1>
