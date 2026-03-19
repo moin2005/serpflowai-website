@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Blog from "./pages/Blog";
+import SEOROICalculator from "./pages/SEOROICalculator";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/privacy" component={Privacy} />
       <Route path="/terms" component={Terms} />
       <Route path="/blog" component={Blog} />
+      <Route path="/seo-roi-calculator" component={SEOROICalculator} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

@@ -48,6 +48,7 @@ export default function Home() {
               <a href="#about" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">About</a>
               <a href="#blog" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">Blog</a>
               <a href="/pricing" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">Pricing</a>
+              <a href="/seo-roi-calculator" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">Free SEO ROI Calculator</a>
               <a href="#audit" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">Free Audit</a>
               <a href="/contact" className="text-gray-700 hover:text-[#2c3e50] text-sm font-medium">Contact</a>
               <a href="/contact" className="inline-flex items-center justify-center px-6 py-2 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors">Get Started</a>

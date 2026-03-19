@@ -80,6 +80,13 @@ export default function MobileNav({ logoUrl, onStrategyCallClick }: MobileNavPro
               Pricing
             </a>
             <a
+              href="/seo-roi-calculator"
+              onClick={closeMenu}
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md text-sm font-medium"
+            >
+              Free SEO ROI Calculator
+            </a>
+            <a
               href="#audit"
               onClick={closeMenu}
               className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md text-sm font-medium"
