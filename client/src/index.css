@@ -388,3 +388,30 @@ button, a, [role="button"] {
     transform: none !important;
   }
 }
+
+/* Bundle card animations */
+.bundle-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.bundle-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation for bundle cards */
+.bundle-card:nth-child(1) { transition-delay: 0s; }
+.bundle-card:nth-child(2) { transition-delay: 0.1s; }
+.bundle-card:nth-child(3) { transition-delay: 0.2s; }
+.bundle-card:nth-child(4) { transition-delay: 0.3s; }
+
+/* Smooth hover effect for bundle cards */
+.bundle-card {
+  @apply transition-all duration-300;
+}
+
+.bundle-card:hover {
+  @apply shadow-xl;
+}

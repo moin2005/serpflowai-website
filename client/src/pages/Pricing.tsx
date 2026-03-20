@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, Rocket, TrendingUp, Zap, Trophy } from "lucide-react";
 import { useState } from "react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import MobileNav from "@/components/MobileNav";
@@ -202,6 +202,53 @@ export default function Pricing() {
     },
   ];
 
+  const bundles = [
+    {
+      icon: Rocket,
+      emoji: "🚀",
+      name: "Launch Bundle",
+      description: "Perfect for launching your online presence",
+      includes: ["Starter Website ($99)", "SEO Starter 3 months ($75)", "Basic Chatbot Setup"],
+      price: "$199",
+      priceNote: "flat",
+      buttonText: "Get Started",
+      buttonLink: "/contact",
+    },
+    {
+      icon: TrendingUp,
+      emoji: "📈",
+      name: "Growth Bundle",
+      description: "For scaling your business",
+      includes: ["Business Website ($199)", "SEO Growth 6 months ($294)", "AI Starter 3 months ($150)"],
+      price: "$549",
+      priceNote: "flat",
+      buttonText: "Get Started",
+      buttonLink: "/contact",
+    },
+    {
+      icon: Zap,
+      emoji: "🤖",
+      name: "AI + SEO Combo",
+      description: "Combine automation with SEO growth",
+      includes: ["SEO Growth ($49/month)", "AI Starter ($49.99/month)"],
+      price: "$85",
+      priceNote: "/month",
+      buttonText: "Get Started",
+      buttonLink: "/contact",
+    },
+    {
+      icon: Trophy,
+      emoji: "🏆",
+      name: "Full Stack",
+      description: "Complete solution for enterprise growth",
+      includes: ["Premium Website", "SEO Enterprise", "AI Enterprise"],
+      price: "$399 + $164.99",
+      priceNote: "/month",
+      buttonText: "Get Started",
+      buttonLink: "/contact",
+    },
+  ];
+
   const paymentMethods = [
     {
       name: "Razorpay",
@@ -381,6 +428,67 @@ export default function Pricing() {
                   </ul>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Recommended Service Bundles */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-[#2c3e50] mb-4" style={{ fontFamily: "Playfair Display, serif" }}>
+                Recommended Service Bundles
+              </h2>
+              <p className="text-gray-600">Combine services for maximum value and better results</p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {bundles.map((bundle, i) => {
+                const BundleIcon = bundle.icon;
+                return (
+                  <Card key={i} className="p-8 hover:shadow-xl transition-shadow duration-300 border border-gray-200">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <div className="flex items-center gap-3 mb-2">
+                          <span className="text-3xl">{bundle.emoji}</span>
+                          <h3 className="text-2xl font-bold text-[#2c3e50]">{bundle.name}</h3>
+                        </div>
+                        <p className="text-gray-600 text-sm">{bundle.description}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="mb-6 py-6 border-t border-b border-gray-200">
+                      <p className="text-sm text-gray-600 font-medium mb-3">What's Included:</p>
+                      <ul className="space-y-2">
+                        {bundle.includes.map((item, j) => (
+                          <li key={j} className="flex gap-2 text-gray-700 text-sm">
+                            <CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-3xl font-bold text-[#2c3e50]">{bundle.price}</span>
+                        <span className="text-gray-600 text-sm">{bundle.priceNote}</span>
+                      </div>
+                    </div>
+                    
+                    <a
+                      href={bundle.buttonLink}
+                      className="w-full inline-flex items-center justify-center px-6 py-3 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors"
+                    >
+                      {bundle.buttonText} <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Card>
+                );
+              })}
+            </div>
+            <div className="mt-12 p-8 bg-blue-50 border border-blue-200 rounded-lg">
+              <p className="text-center text-gray-700">
+                <strong>💡 Tip:</strong> Bundles are customizable. Contact us to discuss which combination works best for your business goals.
+              </p>
             </div>
           </div>
         </section>
