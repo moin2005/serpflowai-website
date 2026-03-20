@@ -204,11 +204,6 @@ export default function Pricing() {
 
   const paymentMethods = [
     {
-      name: "PayPal",
-      description: "Secure international payments with PayPal",
-      icon: "💳",
-    },
-    {
       name: "Razorpay",
       description: "Indian payment gateway for all payment methods",
       icon: "🏦",
