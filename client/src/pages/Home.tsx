@@ -60,20 +60,24 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-20 md:py-32 overflow-hidden">
+        <section className="relative py-24 md:py-48 overflow-hidden">
           <AnimatedBackground />
-          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#2c3e50] mb-6" style={{ fontFamily: "Playfair Display, serif" }}>
+          {/* Subtle gradient glow background */}
+          <div className="absolute inset-0 z-0">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full blur-3xl"></div>
+          </div>
+          <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-[#2c3e50] mb-8 md:mb-10 leading-tight" style={{ fontFamily: "Playfair Display, serif" }}>
               Grow Your Business with SEO & AI Automation
             </h1>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
               Helping businesses increase visibility, generate leads, and automate operations using modern SEO strategies and AI-powered systems.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button onClick={() => { setFormType("strategy-call"); setShowLeadForm(true); }} className="inline-flex items-center justify-center px-6 py-3 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <button onClick={() => { setFormType("strategy-call"); setShowLeadForm(true); }} className="inline-flex items-center justify-center px-8 py-4 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors shadow-lg hover:shadow-xl">
                 Book Free Strategy Call <ArrowRight className="ml-2 h-4 w-4" />
               </button>
-              <a href="/pricing" className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#2c3e50] text-[#2c3e50] hover:bg-gray-50 rounded-md font-medium transition-colors">
+              <a href="/pricing" className="inline-flex items-center justify-center px-8 py-4 border-2 border-[#2c3e50] text-[#2c3e50] hover:bg-gray-50 rounded-md font-medium transition-colors">
                 View SEO Plans
               </a>
             </div>
@@ -81,28 +85,28 @@ export default function Home() {
         </section>
 
         {/* Trust Signals */}
-        <section className="py-12 md:py-16 bg-white border-b border-gray-200">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-slate-900/5 via-white to-slate-900/5 border-b border-gray-200">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-12">
               <div className="text-center">
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-6">
                   <Shield className="h-8 w-8 text-[#2c3e50]" />
                 </div>
-                <h3 className="font-bold text-[#2c3e50] mb-2">100% White Hat SEO</h3>
-                <p className="text-gray-600 text-sm">We follow Google's guidelines strictly and never use black hat techniques.</p>
+                <h3 className="font-bold text-[#2c3e50] mb-3">100% White Hat SEO</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">We follow Google's guidelines strictly and never use black hat techniques.</p>
               </div>
               <div className="text-center">
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-6">
                   <Eye className="h-8 w-8 text-[#2c3e50]" />
                 </div>
-                <h3 className="font-bold text-[#2c3e50] mb-2">Transparent Reporting</h3>
-                <p className="text-gray-600 text-sm">Monthly reports with clear metrics and actionable insights you can understand.</p>
+                <h3 className="font-bold text-[#2c3e50] mb-3">Transparent Reporting</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">Monthly reports with clear metrics and actionable insights you can understand.</p>
               </div>
               <div className="text-center">
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-6">
                   <Target className="h-8 w-8 text-[#2c3e50]" />
                 </div>
-                <h3 className="font-bold text-[#2c3e50] mb-2">ROI-Focused Campaigns</h3>
+                <h3 className="font-bold text-[#2c3e50] mb-3">ROI-Focused Campaigns</h3>
                 <p className="text-gray-600 text-sm">Every strategy is tailored to your business goals and designed to generate measurable results.</p>
               </div>
             </div>
@@ -110,7 +114,7 @@ export default function Home() {
         </section>
 
         {/* Problems & Solutions */}
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900/3 via-white to-slate-900/3">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2c3e50] mb-16" style={{ fontFamily: "Playfair Display, serif" }}>
               Common Business Challenges We Solve
@@ -163,45 +167,45 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-16 md:py-24 bg-gray-50">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900/5 via-slate-50 to-slate-900/5">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2c3e50] mb-16" style={{ fontFamily: "Playfair Display, serif" }}>
               Why Choose SerpFlow AI
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="p-8 hover:shadow-lg transition-shadow">
+            <div className="grid md:grid-cols-2 gap-10">
+              <Card className="p-10 hover:shadow-lg transition-shadow">
                 <div className="flex gap-4">
                   <Lightning className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-bold text-[#2c3e50] mb-2">Data-Driven SEO Strategies</h3>
-                    <p className="text-gray-600">Every decision is backed by comprehensive research, competitor analysis, and performance metrics. We don't guess—we analyze.</p>
+                    <h3 className="font-bold text-[#2c3e50] mb-3">Data-Driven SEO Strategies</h3>
+                    <p className="text-gray-600 leading-relaxed">Every decision is backed by comprehensive research, competitor analysis, and performance metrics. We don't guess—we analyze.</p>
                   </div>
                 </div>
               </Card>
-              <Card className="p-8 hover:shadow-lg transition-shadow">
+              <Card className="p-10 hover:shadow-lg transition-shadow">
                 <div className="flex gap-4">
                   <Eye className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-bold text-[#2c3e50] mb-2">Transparent Monthly Reporting</h3>
-                    <p className="text-gray-600">You'll receive detailed reports showing exactly what we did, how your rankings improved, and the leads generated from our efforts.</p>
+                    <h3 className="font-bold text-[#2c3e50] mb-3">Transparent Monthly Reporting</h3>
+                    <p className="text-gray-600 leading-relaxed">You'll receive detailed reports showing exactly what we did, how your rankings improved, and the leads generated from our efforts.</p>
                   </div>
                 </div>
               </Card>
-              <Card className="p-8 hover:shadow-lg transition-shadow">
+              <Card className="p-10 hover:shadow-lg transition-shadow">
                 <div className="flex gap-4">
                   <Shield className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-bold text-[#2c3e50] mb-2">White-Hat SEO Methods</h3>
-                    <p className="text-gray-600">We strictly follow Google's guidelines and best practices. No shortcuts, no risky tactics—just sustainable, long-term growth.</p>
+                    <h3 className="font-bold text-[#2c3e50] mb-3">White-Hat SEO Methods</h3>
+                    <p className="text-gray-600 leading-relaxed">We strictly follow Google's guidelines and best practices. No shortcuts, no risky tactics—just sustainable, long-term growth.</p>
                   </div>
                 </div>
               </Card>
-              <Card className="p-8 hover:shadow-lg transition-shadow">
+              <Card className="p-10 hover:shadow-lg transition-shadow">
                 <div className="flex gap-4">
                   <Target className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-bold text-[#2c3e50] mb-2">ROI-Focused Campaigns</h3>
-                    <p className="text-gray-600">Every strategy is customized to your business. We focus on generating leads and revenue, not just vanity metrics.</p>
+                    <h3 className="font-bold text-[#2c3e50] mb-3">ROI-Focused Campaigns</h3>
+                    <p className="text-gray-600 leading-relaxed">Every strategy is customized to your business. We focus on generating leads and revenue, not just vanity metrics.</p>
                   </div>
                 </div>
               </Card>
@@ -210,7 +214,7 @@ export default function Home() {
         </section>
 
         {/* Services */}
-        <section id="services" className="py-16 md:py-24 bg-white">
+        <section id="services" className="py-16 md:py-24 bg-gradient-to-br from-slate-900/3 via-white to-slate-900/3">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2c3e50] mb-16" style={{ fontFamily: "Playfair Display, serif" }}>
               Our Services
@@ -280,7 +284,7 @@ export default function Home() {
         </section>
 
         {/* SEO Process */}
-        <section className="py-16 md:py-24 bg-gray-50">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900/5 via-slate-50 to-slate-900/5">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2c3e50] mb-16" style={{ fontFamily: "Playfair Display, serif" }}>
               Our SEO Process
@@ -303,7 +307,7 @@ export default function Home() {
         </section>
 
         {/* Process (Professional) */}
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900/3 via-white to-slate-900/3">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2c3e50] mb-16" style={{ fontFamily: "Playfair Display, serif" }}>
               Our Professional Process
@@ -327,7 +331,7 @@ export default function Home() {
         </section>
 
         {/* About */}
-        <section id="about" className="py-16 md:py-24 bg-gray-50">
+        <section id="about" className="py-16 md:py-24 bg-gradient-to-br from-slate-900/5 via-slate-50 to-slate-900/5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <div className="w-20 h-20 bg-[#2c3e50] rounded-full flex items-center justify-center mx-auto mb-6">
@@ -355,7 +359,7 @@ export default function Home() {
         </section>
 
         {/* Audit Form */}
-        <section id="audit" className="py-16 md:py-24 bg-white">
+        <section id="audit" className="py-16 md:py-24 bg-gradient-to-br from-slate-900/3 via-white to-slate-900/3">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2c3e50] mb-4" style={{ fontFamily: "Playfair Display, serif" }}>
               Get Your Free SEO Audit
@@ -370,7 +374,7 @@ export default function Home() {
         </section>
 
         {/* Blog */}
-        <section id="blog" className="py-16 md:py-24 bg-gray-50">
+        <section id="blog" className="py-16 md:py-24 bg-gradient-to-br from-slate-900/5 via-slate-50 to-slate-900/5">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-[#2c3e50] mb-16" style={{ fontFamily: "Playfair Display, serif" }}>
               Latest Articles
@@ -453,7 +457,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-sm">
-            <p>© 2026 SerpFlow AI. All rights reserved. | Founder: Moin Ur Rahman Siddiqui</p>
+            <p>&copy; 2026 SerpFlow AI. All rights reserved. | Founder: Moin Ur Rahman Siddiqui</p>
           </div>
         </div>
       </footer>
