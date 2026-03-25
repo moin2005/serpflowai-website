@@ -122,54 +122,54 @@ export default function Pricing() {
     },
   ];
 
-  const websitePlans = [
+  const gbpPlans = [
     {
-      name: "Starter Website",
-      price: 99,
-      inrPrice: "₹8,200",
+      name: "Starter Optimization",
+      price: 49,
+      inrPrice: "₹4,050",
       description: "Perfect for small businesses",
       features: [
-        "3–5 pages",
-        "Basic SEO setup",
-        "Mobile responsive design",
-        "Contact form integration",
-        "Basic performance optimization",
+        "Business description optimization with keywords",
+        "Services & products listing setup",
+        "Basic review management guide",
+        "Google Maps ranking optimization",
+        "Monthly optimization report",
       ],
-      buttonText: "Get Website Built",
+      buttonText: "Get Started",
       buttonLink: "/contact",
       popular: false,
     },
     {
-      name: "Business Website",
-      price: 199,
-      inrPrice: "₹16,500",
+      name: "Growth Optimization",
+      price: 99,
+      inrPrice: "₹8,200",
       description: "For growing businesses",
       features: [
-        "5–8 pages",
-        "Advanced SEO setup",
-        "Speed optimization",
-        "Blog integration",
-        "Analytics setup",
-        "Email newsletter integration",
+        "Everything in Starter +",
+        "Advanced keyword optimization",
+        "Review generation strategy",
+        "Customer Q&A management",
+        "Photo optimization & updates",
+        "Bi-weekly performance tracking",
       ],
-      buttonText: "Get Website Built",
+      buttonText: "Get Started",
       buttonLink: "/contact",
       popular: true,
     },
     {
-      name: "Premium Website",
-      price: 399,
-      inrPrice: "₹33,000",
-      description: "Complete solution",
+      name: "Enterprise Optimization",
+      price: 199,
+      inrPrice: "₹16,500",
+      description: "Complete solution for maximum visibility",
       features: [
-        "Full website",
-        "SEO + conversion optimization",
-        "Priority support",
-        "Advanced integrations",
-        "Custom features",
-        "Monthly maintenance included",
+        "Everything in Growth +",
+        "Multi-location management",
+        "Advanced review strategy & response",
+        "Competitor analysis",
+        "Custom campaigns for calls & walk-ins",
+        "Priority support & weekly updates",
       ],
-      buttonText: "Get Website Built",
+      buttonText: "Get Started",
       buttonLink: "/contact",
       popular: false,
     },
@@ -204,28 +204,6 @@ export default function Pricing() {
 
   const bundles = [
     {
-      icon: Rocket,
-      emoji: "🚀",
-      name: "Launch Bundle",
-      description: "Perfect for launching your online presence",
-      includes: ["Starter Website ($99)", "SEO Starter 3 months ($75)", "Basic Chatbot Setup"],
-      price: "$199",
-      priceNote: "flat",
-      buttonText: "Get Started",
-      buttonLink: "/contact",
-    },
-    {
-      icon: TrendingUp,
-      emoji: "📈",
-      name: "Growth Bundle",
-      description: "For scaling your business",
-      includes: ["Business Website ($199)", "SEO Growth 6 months ($294)", "AI Starter 3 months ($150)"],
-      price: "$549",
-      priceNote: "flat",
-      buttonText: "Get Started",
-      buttonLink: "/contact",
-    },
-    {
       icon: Zap,
       emoji: "🤖",
       name: "AI + SEO Combo",
@@ -239,11 +217,11 @@ export default function Pricing() {
     {
       icon: Trophy,
       emoji: "🏆",
-      name: "Full Stack",
-      description: "Complete solution for enterprise growth",
-      includes: ["Premium Website", "SEO Enterprise", "AI Enterprise"],
-      price: "$399 + $164.99",
-      priceNote: "/month",
+      name: "GBP + SEO Bundle",
+      description: "Combine Google Business Profile with SEO",
+      includes: ["GBP Growth Optimization ($99)", "SEO Growth 6 months ($294)"],
+      price: "$299",
+      priceNote: "flat",
       buttonText: "Get Started",
       buttonLink: "/contact",
     },
@@ -393,17 +371,17 @@ export default function Pricing() {
           </div>
         </section>
 
-        {/* Website Development Pricing */}
+        {/* Google Business Profile Optimization Pricing */}
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-[#2c3e50] mb-4" style={{ fontFamily: "Playfair Display, serif" }}>
-                Website Development & Optimization
+                Google Business Profile Optimization
               </h2>
-              <p className="text-gray-600">High-converting, fast, and SEO-optimized websites designed to generate leads and improve user experience</p>
+              <p className="text-gray-600">Optimize your Google Business Profile to increase visibility, attract more customers, and boost calls and walk-ins</p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
-              {websitePlans.map((plan, i) => (
+              {gbpPlans.map((plan, i) => (
                 <Card key={i} className={`p-8 ${plan.popular ? "border-2 border-yellow-500 shadow-lg" : ""}`}>
                   {plan.popular && <div className="text-center mb-4"><span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium">Most Popular</span></div>}
                   <h3 className="text-2xl font-bold text-[#2c3e50] mb-2">{plan.name}</h3>

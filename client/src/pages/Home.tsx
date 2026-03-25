@@ -254,15 +254,15 @@ export default function Home() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-[#2c3e50] mb-12 text-center">Website Development & Optimization</h3>
-              <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">High-converting, fast, and SEO-optimized websites designed to generate leads and improve user experience.</p>
+              <h3 className="text-2xl font-bold text-[#2c3e50] mb-12 text-center">Google Business Profile Optimization</h3>
+              <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Optimize your Google Business Profile to increase visibility, attract more customers, and boost calls and walk-ins.</p>
               <div className="grid md:grid-cols-5 gap-6 mb-8">
                 {[
-                  { icon: TrendingUp, title: "Custom website design" },
-                  { icon: BarChart3, title: "Mobile responsive development" },
-                  { icon: Zap, title: "SEO-friendly structure" },
-                  { icon: Lightning, title: "Fast loading speed optimization" },
-                  { icon: Target, title: "Conversion-focused layout" },
+                  { icon: TrendingUp, title: "Business description optimization" },
+                  { icon: BarChart3, title: "Google Maps ranking improvement" },
+                  { icon: Zap, title: "Services & products management" },
+                  { icon: MessageSquare, title: "Customer review strategy" },
+                  { icon: Target, title: "Calls & walk-ins boost" },
                 ].map((service, i) => (
                   <Card key={i} className="p-6 hover:shadow-lg transition-shadow">
                     <service.icon className="h-8 w-8 text-[#2c3e50] mb-4" />
@@ -272,7 +272,7 @@ export default function Home() {
               </div>
               <div className="text-center">
                 <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-[#2c3e50] hover:bg-[#1a1a1a] text-white rounded-md font-medium transition-colors">
-                  Get Website Built <ArrowRight className="ml-2 h-4 w-4" />
+                  Optimize Profile <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>
             </div>
