@@ -5,6 +5,7 @@ import { useState } from "react";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import MobileNav from "@/components/MobileNav";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import AnimatedCard from "@/components/AnimatedCard";
 
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663440467419/P3fiAVfaV8omLzzwuQ3DCY/pasted_file_ANmRGr_image_89f60f74.png";
 
@@ -88,27 +89,33 @@ export default function Home() {
         <section className="py-16 md:py-20 bg-gradient-to-br from-slate-900/5 via-white to-slate-900/5 border-b border-gray-200">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-12">
-              <div className="text-center">
-                <div className="flex justify-center mb-6">
-                  <Shield className="h-8 w-8 text-[#2c3e50]" />
+              <AnimatedCard delay={0}>
+                <div className="text-center">
+                  <div className="flex justify-center mb-6">
+                    <Shield className="h-8 w-8 text-[#2c3e50]" />
+                  </div>
+                  <h3 className="font-bold text-[#2c3e50] mb-3">100% White Hat SEO</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">We follow Google's guidelines strictly and never use black hat techniques.</p>
                 </div>
-                <h3 className="font-bold text-[#2c3e50] mb-3">100% White Hat SEO</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">We follow Google's guidelines strictly and never use black hat techniques.</p>
-              </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-6">
-                  <Eye className="h-8 w-8 text-[#2c3e50]" />
+              </AnimatedCard>
+              <AnimatedCard delay={100}>
+                <div className="text-center">
+                  <div className="flex justify-center mb-6">
+                    <Eye className="h-8 w-8 text-[#2c3e50]" />
+                  </div>
+                  <h3 className="font-bold text-[#2c3e50] mb-3">Transparent Reporting</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">Monthly reports with clear metrics and actionable insights you can understand.</p>
                 </div>
-                <h3 className="font-bold text-[#2c3e50] mb-3">Transparent Reporting</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">Monthly reports with clear metrics and actionable insights you can understand.</p>
-              </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-6">
-                  <Target className="h-8 w-8 text-[#2c3e50]" />
+              </AnimatedCard>
+              <AnimatedCard delay={200}>
+                <div className="text-center">
+                  <div className="flex justify-center mb-6">
+                    <Target className="h-8 w-8 text-[#2c3e50]" />
+                  </div>
+                  <h3 className="font-bold text-[#2c3e50] mb-3">ROI-Focused Campaigns</h3>
+                  <p className="text-gray-600 text-sm">Every strategy is tailored to your business goals and designed to generate measurable results.</p>
                 </div>
-                <h3 className="font-bold text-[#2c3e50] mb-3">ROI-Focused Campaigns</h3>
-                <p className="text-gray-600 text-sm">Every strategy is tailored to your business goals and designed to generate measurable results.</p>
-              </div>
+              </AnimatedCard>
             </div>
           </div>
         </section>
@@ -173,42 +180,50 @@ export default function Home() {
               Why Choose SerpFlow AI
             </h2>
             <div className="grid md:grid-cols-2 gap-10">
-              <Card className="p-10 hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Lightning className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-bold text-[#2c3e50] mb-3">Data-Driven SEO Strategies</h3>
-                    <p className="text-gray-600 leading-relaxed">Every decision is backed by comprehensive research, competitor analysis, and performance metrics. We don't guess—we analyze.</p>
+              <AnimatedCard delay={0}>
+                <Card className="p-10 hover:shadow-lg transition-shadow">
+                  <div className="flex gap-4">
+                    <Lightning className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-bold text-[#2c3e50] mb-3">Data-Driven SEO Strategies</h3>
+                      <p className="text-gray-600 leading-relaxed">Every decision is backed by comprehensive research, competitor analysis, and performance metrics. We don't guess—we analyze.</p>
+                    </div>
                   </div>
-                </div>
-              </Card>
-              <Card className="p-10 hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Eye className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-bold text-[#2c3e50] mb-3">Transparent Monthly Reporting</h3>
-                    <p className="text-gray-600 leading-relaxed">You'll receive detailed reports showing exactly what we did, how your rankings improved, and the leads generated from our efforts.</p>
+                </Card>
+              </AnimatedCard>
+              <AnimatedCard delay={100}>
+                <Card className="p-10 hover:shadow-lg transition-shadow">
+                  <div className="flex gap-4">
+                    <Eye className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-bold text-[#2c3e50] mb-3">Transparent Monthly Reporting</h3>
+                      <p className="text-gray-600 leading-relaxed">You'll receive detailed reports showing exactly what we did, how your rankings improved, and the leads generated from our efforts.</p>
+                    </div>
                   </div>
-                </div>
-              </Card>
-              <Card className="p-10 hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Shield className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-bold text-[#2c3e50] mb-3">White-Hat SEO Methods</h3>
-                    <p className="text-gray-600 leading-relaxed">We strictly follow Google's guidelines and best practices. No shortcuts, no risky tactics—just sustainable, long-term growth.</p>
+                </Card>
+              </AnimatedCard>
+              <AnimatedCard delay={200}>
+                <Card className="p-10 hover:shadow-lg transition-shadow">
+                  <div className="flex gap-4">
+                    <Shield className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-bold text-[#2c3e50] mb-3">White-Hat SEO Methods</h3>
+                      <p className="text-gray-600 leading-relaxed">We strictly follow Google's guidelines and best practices. No shortcuts, no risky tactics—just sustainable, long-term growth.</p>
+                    </div>
                   </div>
-                </div>
-              </Card>
-              <Card className="p-10 hover:shadow-lg transition-shadow">
-                <div className="flex gap-4">
-                  <Target className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-bold text-[#2c3e50] mb-3">ROI-Focused Campaigns</h3>
-                    <p className="text-gray-600 leading-relaxed">Every strategy is customized to your business. We focus on generating leads and revenue, not just vanity metrics.</p>
+                </Card>
+              </AnimatedCard>
+              <AnimatedCard delay={300}>
+                <Card className="p-10 hover:shadow-lg transition-shadow">
+                  <div className="flex gap-4">
+                    <Target className="h-6 w-6 text-[#2c3e50] flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="font-bold text-[#2c3e50] mb-3">ROI-Focused Campaigns</h3>
+                      <p className="text-gray-600 leading-relaxed">Every strategy is customized to your business. We focus on generating leads and revenue, not just vanity metrics.</p>
+                    </div>
                   </div>
-                </div>
-              </Card>
+                </Card>
+              </AnimatedCard>
             </div>
           </div>
         </section>
@@ -229,12 +244,14 @@ export default function Home() {
                   { icon: Zap, title: "Content Optimization", desc: "Create and optimize content that ranks and converts visitors" },
                   { icon: MessageSquare, title: "Local SEO", desc: "Dominate local search results and attract nearby customers" },
                 ].map((service, i) => (
-                  <Card key={i} className="p-6 hover:shadow-lg transition-shadow">
-                    <service.icon className="h-8 w-8 text-[#2c3e50] mb-4" />
-                    <h4 className="font-bold text-[#2c3e50] mb-2">{service.title}</h4>
-                    <p className="text-gray-600 text-sm">{service.desc}</p>
-                    <button className="text-[#2c3e50] hover:text-[#1a1a1a] font-medium text-sm mt-4">Learn More →</button>
-                  </Card>
+                  <AnimatedCard key={i} delay={i * 100}>
+                    <Card className="p-6 hover:shadow-lg transition-shadow">
+                      <service.icon className="h-8 w-8 text-[#2c3e50] mb-4" />
+                      <h4 className="font-bold text-[#2c3e50] mb-2">{service.title}</h4>
+                      <p className="text-gray-600 text-sm">{service.desc}</p>
+                      <button className="text-[#2c3e50] hover:text-[#1a1a1a] font-medium text-sm mt-4">Learn More →</button>
+                    </Card>
+                  </AnimatedCard>
                 ))}
               </div>
             </div>
@@ -247,12 +264,14 @@ export default function Home() {
                   { icon: Lightbulb, title: "Lead Qualification", desc: "Automatically qualify and prioritize leads for your sales team" },
                   { icon: Zap, title: "Workflow Automation", desc: "Eliminate repetitive tasks and streamline business operations" },
                 ].map((service, i) => (
-                  <Card key={i} className="p-6 hover:shadow-lg transition-shadow">
-                    <service.icon className="h-8 w-8 text-[#2c3e50] mb-4" />
-                    <h4 className="font-bold text-[#2c3e50] mb-2">{service.title}</h4>
-                    <p className="text-gray-600 text-sm">{service.desc}</p>
-                    <button className="text-[#2c3e50] hover:text-[#1a1a1a] font-medium text-sm mt-4">Learn More →</button>
-                  </Card>
+                  <AnimatedCard key={i} delay={i * 100}>
+                    <Card className="p-6 hover:shadow-lg transition-shadow">
+                      <service.icon className="h-8 w-8 text-[#2c3e50] mb-4" />
+                      <h4 className="font-bold text-[#2c3e50] mb-2">{service.title}</h4>
+                      <p className="text-gray-600 text-sm">{service.desc}</p>
+                      <button className="text-[#2c3e50] hover:text-[#1a1a1a] font-medium text-sm mt-4">Learn More →</button>
+                    </Card>
+                  </AnimatedCard>
                 ))}
               </div>
             </div>
@@ -268,10 +287,12 @@ export default function Home() {
                   { icon: MessageSquare, title: "Customer review strategy" },
                   { icon: Target, title: "Calls & walk-ins boost" },
                 ].map((service, i) => (
-                  <Card key={i} className="p-6 hover:shadow-lg transition-shadow">
-                    <service.icon className="h-8 w-8 text-[#2c3e50] mb-4" />
-                    <h4 className="font-bold text-[#2c3e50] mb-2 text-sm">{service.title}</h4>
-                  </Card>
+                  <AnimatedCard key={i} delay={i * 100}>
+                    <Card className="p-6 hover:shadow-lg transition-shadow">
+                      <service.icon className="h-8 w-8 text-[#2c3e50] mb-4" />
+                      <h4 className="font-bold text-[#2c3e50] mb-2 text-sm">{service.title}</h4>
+                    </Card>
+                  </AnimatedCard>
                 ))}
               </div>
               <div className="text-center">
@@ -381,19 +402,21 @@ export default function Home() {
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { category: "Local SEO", title: "What Is Local SEO and Why It Matters for Small Businesses", desc: "Learn how to optimize your business for local search results and attract nearby customers..." },
-                { category: "Technical SEO", title: "Technical SEO Basics Every Website Needs", desc: "Discover the essential technical elements every website must have for better rankings..." },
-                { category: "On-Page SEO", title: "On-Page SEO Checklist for 2026", desc: "Master on-page SEO with our comprehensive checklist for ranking higher in search results..." },
-              ].map((article, i) => (
-                <Card key={i} className="p-6 hover:shadow-lg transition-shadow cursor-pointer">
-                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full mb-4">
-                    {article.category}
-                  </span>
-                  <h4 className="font-bold text-[#2c3e50] mb-2 text-lg">{article.title}</h4>
-                  <p className="text-gray-600 text-sm mb-4">{article.desc}</p>
-                  <a href="/blog" className="text-[#2c3e50] hover:text-[#1a1a1a] font-medium text-sm">Read More →</a>
-                </Card>
-              ))}
+                  { category: "Local SEO", title: "What Is Local SEO and Why It Matters for Small Businesses", desc: "Learn how to optimize your business for local search results and attract nearby customers..." },
+                  { category: "Technical SEO", title: "Technical SEO Basics Every Website Needs", desc: "Discover the essential technical elements every website must have for better rankings..." },
+                  { category: "On-Page SEO", title: "On-Page SEO Checklist for 2026", desc: "Master on-page SEO with our comprehensive checklist for ranking higher in search results..." },
+                ].map((article, i) => (
+                  <AnimatedCard key={i} delay={i * 100}>
+                    <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                      <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full mb-4">
+                        {article.category}
+                      </span>
+                      <h4 className="font-bold text-[#2c3e50] mb-2 text-lg">{article.title}</h4>
+                      <p className="text-gray-600 text-sm mb-4">{article.desc}</p>
+                      <a href="/blog" className="text-[#2c3e50] hover:text-[#1a1a1a] font-medium text-sm">Read More →</a>
+                    </Card>
+                  </AnimatedCard>
+                ))}
             </div>
             <div className="text-center mt-12">
               <a href="/blog" className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#2c3e50] text-[#2c3e50] hover:bg-gray-50 rounded-md font-medium transition-colors">View All Articles</a>
