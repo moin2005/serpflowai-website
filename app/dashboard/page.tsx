@@ -54,11 +54,19 @@ export default function DashboardPage() {
     return "Good evening"
   }
 
-  const formatLastWorkout = (date: Date | null) => {
+  const formatLastWorkout = (date: any) => {
     if (!date) return "No activity yet"
+
+    const parsedDate = new Date(date)
+
+    if (isNaN(parsedDate.getTime())) {
+      return "No activity yet"
+    }
+
     const now = new Date()
-    const diff = now.getTime() - date.getTime()
+    const diff = now.getTime() - parsedDate.getTime()
     const days = Math.floor(diff / (1000 * 60 * 60 * 24))
+
     if (days === 0) return "Today"
     if (days === 1) return "Yesterday"
     return `${days} days ago`
