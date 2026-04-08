@@ -44,7 +44,22 @@ export default function DashboardPage() {
   const [stats, setStats] = useState({ workoutsCompleted: 0, lastWorkout: null as Date | null, totalActivities: 0 })
 
   useEffect(() => {
-    setStats(getStats())
+    try {
+      const data = getStats()
+
+      setStats({
+        workoutsCompleted: data?.workoutsCompleted || 0,
+        lastWorkout: data?.lastWorkout || null,
+        totalActivities: data?.totalActivities || 0,
+      })
+    } catch (err) {
+      console.error("Stats error:", err)
+      setStats({
+        workoutsCompleted: 0,
+        lastWorkout: null,
+        totalActivities: 0,
+      })
+    }
   }, [])
 
   const getGreeting = () => {
